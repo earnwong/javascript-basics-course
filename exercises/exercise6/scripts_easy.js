@@ -25,4 +25,47 @@ taskForm.addEventListener("submit", function (event) {
     // What property sets the text inside an element?
     li.__________ = taskText; // (Hint: Set the task text inside the list item)
 
-    // �
+    // 🎯 Goal: Allow users to mark a task as "Complete"
+    // How can we create an interactive button?
+    const completeButton = _____________________("button");
+    completeButton.__________ = "Complete"; // (Hint: Set the button text to "Complete")
+
+    // 🎯 Goal: When the user clicks the Complete button, we want to mark the task as done
+    // How can we visually indicate a completed task?
+    completeButton.addEventListener("click", function () {
+      li.__________("completed"); // (Hint: Add a class to change the task's style)
+    });
+
+    // 🎯 Goal: Allow users to remove a task from the list
+    // What happens when they don’t need a task anymore?
+    const deleteButton = ________________________("button");
+    deleteButton.__________ = "Delete"; // (Hint: Set the button text to "Delete")
+
+    // 🎯 Goal: Clicking the Delete button should remove the task from the list
+    // How do we remove an element from its parent?
+    deleteButton.addEventListener("click", function () {
+      taskList.__________(li); // (Hint: Remove the list item from the task list)
+    });
+
+    // 🎯 Goal: Buttons should be grouped together for better UI
+    // How can we organize multiple buttons inside a task?
+    const taskActions = document.createElement(___);
+    taskActions.className = "task-actions"; // (Hint: This div will contain both buttons)
+
+    // 🎯 Goal: Attach the buttons to our taskActions div
+    taskActions.appendChild(__________); // (Hint: Append the complete button)
+    taskActions.appendChild(__________); // (Hint: Append the delete button)
+
+    // 🎯 Goal: Attach taskActions to the list item (so buttons stay with each task)
+    li.appendChild(__________); // (Hint: Append the taskActions div to the list item)
+
+    // 🎯 Goal: Now we need to add our fully built task to the task list
+    taskList.__________(li); // (Hint: Append the new task to the list)
+
+    // 🎯 Goal: Clear the input field after adding a task
+    // What should we do so the user doesn’t have to delete old input manually?
+    taskInput.__________ = ""; // (Hint: Reset the input field to an empty string)
+  } else {
+    alert(___________); // Alert the user if they try to submit an empty task
+  }
+});
