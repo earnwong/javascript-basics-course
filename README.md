@@ -8,7 +8,6 @@ To get started, clone the repository to your local machine using the following c
 
 ```sh
 git clone <repository-url>
-cd <repository-folder>
 ```
 
 ## Running the Code
@@ -28,7 +27,7 @@ After completing each exercise, commit your changes and push them to the reposit
 ```sh
 git add .
 git commit -m "exercise1-finish"  # Change the number based on the exercise
-git push origin main  # Replace 'main' with your branch name if different
+git push 
 ```
 
 Repeat this process for every exercise (`exercise2-finish`, `exercise3-finish`, etc.).
